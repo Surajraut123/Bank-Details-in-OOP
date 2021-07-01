@@ -1,0 +1,72 @@
+
+#include <iostream>
+using namespace std;
+
+class bank
+{
+    public:
+    long int acc_no;
+    float bal;
+    long int mo_no;
+    char name[50];
+    char address[100];
+    
+    void getdata();
+    void display();
+};
+void bank::getdata()
+{
+    cout<<"enter the account no"<<endl;
+    cin>>acc_no;
+    cout<<"enter the balance"<<endl;
+    cin>>bal;
+    cout<<"enter the mobile no"<<endl;
+    cin>>mo_no;
+    cout<<"enter the name"<<endl;
+    cin>>name;
+    cout<<"enter the address"<<endl;
+    cin>>address;
+};
+void bank::display()
+{
+    cout<<"The client bank information"<<endl;
+    cout<<"Account No:-"<<acc_no<<endl;
+    cout<<"Balance:-"<<bal<<endl;
+    cout<<"Mobile No:-"<<mo_no<<endl;
+    cout<<"Name:-"<<name<<endl;
+    cout<<"Address:-"<<address<<endl;
+};
+int main()
+{
+    bank b[3];
+    int i;
+    long int acc;
+    for(i=0;i<3;i++)
+    {
+        b[i].getdata();
+    };
+    cout<<"The acc no of client is"<<endl;
+    cin>>acc;
+    for(i=0;i<3;i++)
+        {
+        if(b[i].acc_no==acc)
+         b[i].display();
+        
+        else
+        cout<<"Bank details not found";
+        }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
